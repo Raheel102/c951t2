@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <category><pattern>ROUTE CYBERSECURITY ANALYST</pattern><template>Cybersecurity Analyst role. Core skills: networking, logs, security hygiene. Starter step: practice log analysis. Prefer Blue Team or Red Team?</template></category>
+  <category><pattern>BLUE TEAM</pattern><template>Defensive focus: monitoring and response. Try a SIEM lab.</template></category>
+  <category><pattern>RED TEAM</pattern><template>Offensive focus: ethical hacking. Practice in legal sandbox labs.</template></category>
+</aiml>

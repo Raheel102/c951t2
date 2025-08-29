@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+  <category>
+    <pattern>ROUTE CLOUD ENGINEER</pattern>
+    <template>
+      Consider <b>Cloud Engineer</b>. You’d provision infrastructure, automate deployments, and keep services reliable.
+      <br/><br/><b>Core skills:</b> Linux basics, scripting, containers, IaC concepts, CI/CD fundamentals.
+      <br/><b>Starter steps:</b> Containerize a small app and deploy it; write a short runbook describing how it works.
+      <br/><br/>Curious about DevOps or Cloud Ops?
+    </template>
+  </category>
+
+  <category>
+    <pattern>DEVOPS</pattern>
+    <template>
+      DevOps blends dev &amp; ops culture and tooling. Try a pipeline that builds, tests, and deploys on each commit.
+    </template>
+  </category>
+
+  <category>
+    <pattern>CLOUD OPS</pattern>
+    <template>
+      Cloud ops emphasizes uptime &amp; scaling. Practice health checks, logs, and automated restarts for a sample app.
+    </template>
+  </category>
+
+</aiml>

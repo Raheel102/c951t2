@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <category><pattern>ROUTE UX UI DESIGNER</pattern><template>You may like UX/UI Designer. Core skills: research, prototyping, usability. Starter step: redesign a simple app screen. Want tips for portfolio?</template></category>
+  <category><pattern>YES</pattern><template>Show 3 projects: problem, process, prototype, outcome.</template></category>
+</aiml>

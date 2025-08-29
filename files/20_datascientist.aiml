@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <category><pattern>ROUTE DATA SCIENTIST</pattern><template>Consider Data Scientist. Core skills: Python, pandas, stats, ML. Starter step: Analyze a dataset. More into analytics, ML, or data engineering?</template></category>
+  <category><pattern>ANALYTICS</pattern><template>Focus on dashboards and storytelling. Build a small report with visuals.</template></category>
+  <category><pattern>MACHINE LEARNING</pattern><template>Focus on models. Train a classifier and evaluate accuracy.</template></category>
+  <category><pattern>DATA ENGINEERING</pattern><template>Focus on pipelines. Ingest-clean-store-query a dataset.</template></category>
+</aiml>

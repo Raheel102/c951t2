@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+  <!-- ===== Entry & help ===== -->
+  <category><pattern>HELLO</pattern><template>Type START CAREER QUIZ to begin.</template></category>
+  <category><pattern>HELP</pattern><template>Use: START CAREER QUIZ, RESTART, HELP.</template></category>
+  <category><pattern>RESTART</pattern><template><srai>START CAREER QUIZ</srai></template></category>
+
+  <!-- ===== Start quiz (reset predicates) ===== -->
+  <category>
+    <pattern>START CAREER QUIZ</pattern>
+    <template>
+      <think><set name="INTEREST"></set><set name="WORK_STYLE"></set></think>
+      Q1) WHAT AREA EXCITES YOU MOST? (TYPE ONE)
+      - PROGRAMMING / CODING
+      - DATA / STATISTICS
+      - SECURITY / CYBER
+      - HELPING PEOPLE / SUPPORT
+      - ARTIFICIAL INTELLIGENCE / MACHINE LEARNING / AI
+    </template>
+  </category>
+
+  <!-- ===== Q1 normalizers -> canonical intents ===== -->
+  <!-- PROGRAMMING -->
+  <category><pattern>PROGRAMMING</pattern><template><srai>Q1 PROGRAMMING</srai></template></category>
+  <category><pattern>*PROGRAMMING*</pattern><template><srai>Q1 PROGRAMMING</srai></template></category>
+  <category><pattern>CODING</pattern><template><srai>Q1 PROGRAMMING</srai></template></category>
+  <category><pattern>*CODING*</pattern><template><srai>Q1 PROGRAMMING</srai></template></category>
+
+  <!-- DATA -->
+  <category><pattern>DATA</pattern><template><srai>Q1 DATA</srai></template></category>
+  <category><pattern>*DATA*</pattern><template><srai>Q1 DATA</srai></template></category>
+  <category><pattern>STATISTICS</pattern><template><srai>Q1 DATA</srai></template></category>
+  <category><pattern>*STATISTIC*</pattern><template><srai>Q1 DATA</srai></template></category>
+
+  <!-- SECURITY / CYBER -->
+  <category><pattern>SECURITY</pattern><template><srai>Q1 CYBER</srai></template></category>
+  <category><pattern>*SECURITY*</pattern><template><srai>Q1 CYBER</srai></template></category>
+  <category><pattern>CYBER</pattern><template><srai>Q1 CYBER</srai></template></category>
+  <category><pattern>*CYBER*</pattern><template><srai>Q1 CYBER</srai></template></category>
+
+  <!-- SUPPORT -->
+  <category><pattern>SUPPORT</pattern><template><srai>Q1 SUPPORT</srai></template></category>
+  <category><pattern>*SUPPORT*</pattern><template><srai>Q1 SUPPORT</srai></template></category>
+  <category><pattern>HELPING PEOPLE</pattern><template><srai>Q1 SUPPORT</srai></template></category>
+  <category><pattern>*HELPING PEOPLE*</pattern><template><srai>Q1 SUPPORT</srai></template></category>
+
+  <!-- AI -->
+  <category><pattern>AI</pattern><template><srai>Q1 AI</srai></template></category>
+  <category><pattern>*AI*</pattern><template><srai>Q1 AI</srai></template></category>
+  <category><pattern>ARTIFICIAL INTELLIGENCE</pattern><template><srai>Q1 AI</srai></template></category>
+  <category><pattern>*ARTIFICIAL INTELLIGENCE*</pattern><template><srai>Q1 AI</srai></template></category>
+  <category><pattern>MACHINE LEARNING</pattern><template><srai>Q1 AI</srai></template></category>
+  <category><pattern>*MACHINE LEARNING*</pattern><template><srai>Q1 AI</srai></template></category>
+
+  <!-- ===== Q1 canonical handlers: set INTEREST, ask Q2 ===== -->
+  <category>
+    <pattern>Q1 PROGRAMMING</pattern>
+    <template><think><set name="INTEREST">PROGRAMMING</set></think><srai>ASK Q2</srai></template>
+  </category>
+  <category>
+    <pattern>Q1 DATA</pattern>
+    <template><think><set name="INTEREST">DATA</set></think><srai>ASK Q2</srai></template>
+  </category>
+  <category>
+    <pattern>Q1 CYBER</pattern>
+    <template><think><set name="INTEREST">CYBER</set></think><srai>ASK Q2</srai></template>
+  </category>
+  <category>
+    <pattern>Q1 SUPPORT</pattern>
+    <template><think><set name="INTEREST">SUPPORT</set></think><srai>ASK Q2</srai></template>
+  </category>
+  <category>
+    <pattern>Q1 AI</pattern>
+    <template><think><set name="INTEREST">AI</set></think><srai>ASK Q2</srai></template>
+  </category>
+
+  <!-- Reuse one Q2 prompt -->
+  <category>
+    <pattern>ASK Q2</pattern>
+    <template>
+      Q2) WHICH WORK STYLE FITS YOU BEST? (TYPE ONE)
+      - BUILDING THINGS
+      - RESEARCH / ANALYSIS
+      - DEFENSE / TESTING
+      - CUSTOMER FACING SUPPORT
+      - EXPERIMENT WITH AI MODELS
+    </template>
+  </category>
+
+  <!-- ===== Q2 normalizers -> canonical styles ===== -->
+  <!-- BUILDING -->
+  <category><pattern>BUILDING THINGS</pattern><template><srai>Q2 BUILDING</srai></template></category>
+  <category><pattern>*BUILDING THINGS*</pattern><template><srai>Q2 BUILDING</srai></template></category>
+  <category><pattern>BUILD</pattern><template><srai>Q2 BUILDING</srai></template></category>
+  <category><pattern>*BUILD*</pattern><template><srai>Q2 BUILDING</srai></template></category>
+
+  <!-- RESEARCH -->
+  <category><pattern>RESEARCH</pattern><template><srai>Q2 RESEARCH</srai></template></category>
+  <category><pattern>*RESEARCH*</pattern><template><srai>Q2 RESEARCH</srai></template></category>
+  <category><pattern>ANALYSIS</pattern><template><srai>Q2 RESEARCH</srai></template></category>
+  <category><pattern>*ANALYS*</pattern><template><srai>Q2 RESEARCH</srai></template></category>
+
+  <!-- DEFENSE -->
+  <category><pattern>DEFENSE</pattern><template><srai>Q2 DEFENSE</srai></template></category>
+  <category><pattern>*DEFENSE*</pattern><template><srai>Q2 DEFENSE</srai></template></category>
+  <category><pattern>TESTING</pattern><template><srai>Q2 DEFENSE</srai></template></category>
+  <category><pattern>*TESTING*</pattern><template><srai>Q2 DEFENSE</srai></template></category>
+
+  <!-- CUSTOMER -->
+  <category><pattern>CUSTOMER FACING SUPPORT</pattern><template><srai>Q2 CUSTOMER</srai></template></category>
+  <category><pattern>*CUSTOMER FACING SUPPORT*</pattern><template><srai>Q2 CUSTOMER</srai></template></category>
+  <category><pattern>CUSTOMER</pattern><template><srai>Q2 CUSTOMER</srai></template></category>
+  <category><pattern>*CUSTOMER*</pattern><template><srai>Q2 CUSTOMER</srai></template></category>
+
+  <!-- EXPERIMENT -->
+  <category><pattern>EXPERIMENT WITH AI MODELS</pattern><template><srai>Q2 EXPERIMENT</srai></template></category>
+  <category><pattern>*EXPERIMENT WITH AI MODELS*</pattern><template><srai>Q2 EXPERIMENT</srai></template></category>
+  <category><pattern>EXPERIMENT</pattern><template><srai>Q2 EXPERIMENT</srai></template></category>
+  <category><pattern>*EXPERIMENT*</pattern><template><srai>Q2 EXPERIMENT</srai></template></category>
+
+  <!-- ===== Q2 canonical handlers: set WORK_STYLE, DECIDE ===== -->
+  <category><pattern>Q2 BUILDING</pattern><template><think><set name="WORK_STYLE">BUILDING</set></think><srai>DECIDE</srai></template></category>
+  <category><pattern>Q2 RESEARCH</pattern><template><think><set name="WORK_STYLE">RESEARCH</set></think><srai>DECIDE</srai></template></category>
+  <category><pattern>Q2 DEFENSE</pattern><template><think><set name="WORK_STYLE">DEFENSE</set></think><srai>DECIDE</srai></template></category>
+  <category><pattern>Q2 CUSTOMER</pattern><template><think><set name="WORK_STYLE">CUSTOMER</set></think><srai>DECIDE</srai></template></category>
+  <category><pattern>Q2 EXPERIMENT</pattern><template><think><set name="WORK_STYLE">EXPERIMENT</set></think><srai>DECIDE</srai></template></category>
+
+  <!-- ===== Decision node (compact) ===== -->
+  <category>
+    <pattern>DECIDE</pattern>
+    <template>
+      <condition name="INTEREST">
+        <li value="PROGRAMMING">
+          <condition name="WORK_STYLE">
+            <li value="BUILDING">RECOMMENDATION: SOFTWARE DEVELOPER.</li>
+            <li value="RESEARCH">RECOMMENDATION: SOFTWARE DEV (ALGORITHMS/OPTIMIZATION).</li>
+            <li value="DEFENSE">RECOMMENDATION: CYBERSECURITY ENGINEER (SECURE CODING).</li>
+            <li value="CUSTOMER">RECOMMENDATION: IT SUPPORT / JUNIOR DEVELOPER.</li>
+            <li value="EXPERIMENT">RECOMMENDATION: AI/ML ENGINEER.</li>
+          </condition>
+        </li>
+        <li value="DATA">
+          <condition name="WORK_STYLE">
+            <li value="RESEARCH">RECOMMENDATION: DATA SCIENTIST.</li>
+            <li value="BUILDING">RECOMMENDATION: DATA ENGINEER.</li>
+            <li value="DEFENSE">RECOMMENDATION: SECURITY DATA ANALYST.</li>
+            <li value="CUSTOMER">RECOMMENDATION: BI ANALYST.</li>
+            <li value="EXPERIMENT">RECOMMENDATION: MACHINE LEARNING ENGINEER.</li>
+          </condition>
+        </li>
+        <li value="CYBER">
+          <condition name="WORK_STYLE">
+            <li value="DEFENSE">RECOMMENDATION: CYBERSECURITY ANALYST.</li>
+            <li value="RESEARCH">RECOMMENDATION: THREAT RESEARCHER.</li>
+            <li value="BUILDING">RECOMMENDATION: SECURITY ENGINEER.</li>
+            <li value="CUSTOMER">RECOMMENDATION: GRC ANALYST.</li>
+            <li value="EXPERIMENT">RECOMMENDATION: SECURITY DATA SCIENTIST.</li>
+          </condition>
+        </li>
+        <li value="SUPPORT">
+          <condition name="WORK_STYLE">
+            <li value="CUSTOMER">RECOMMENDATION: IT SUPPORT SPECIALIST.</li>
+            <li value="BUILDING">RECOMMENDATION: SYSTEMS ADMINISTRATOR.</li>
+            <li value="RESEARCH">RECOMMENDATION: TECHNICAL WRITER / SUPPORT ENGINEER.</li>
+            <li value="DEFENSE">RECOMMENDATION: ENDPOINT SECURITY TECH.</li>
+            <li value="EXPERIMENT">RECOMMENDATION: AUTOMATION SUPPORT.</li>
+          </condition>
+        </li>
+        <li value="AI">
+          <condition name="WORK_STYLE">
+            <li value="EXPERIMENT">RECOMMENDATION: AI/ML ENGINEER.</li>
+            <li value="RESEARCH">RECOMMENDATION: APPLIED ML RESEARCHER.</li>
+            <li value="BUILDING">RECOMMENDATION: ML PLATFORM ENGINEER.</li>
+            <li value="DEFENSE">RECOMMENDATION: AI SECURITY SPECIALIST.</li>
+            <li value="CUSTOMER">RECOMMENDATION: AI SOLUTIONS ARCHITECT.</li>
+          </condition>
+        </li>
+        <li>PLEASE TYPE RESTART TO TRY AGAIN.</li>
+      </condition>
+    </template>
+  </category>
+
+  <!-- ===== Simple follow-ups ===== -->
+  <category><pattern>YES</pattern><template>Great! Ask for: LANGUAGES, COURSES, CERTS, or TOOLS.</template></category>
+  <category><pattern>NO</pattern><template>Okay. Type RESTART to retake the quiz.</template></category>
+
+  <!-- ===== Catch-all to re-prompt during quiz ===== -->
+  <category>
+    <pattern>*</pattern>
+    <template>Sorry, I didn’t catch that. Type START CAREER QUIZ to begin or RESTART to try again.</template>
+  </category>
+
+</aiml>

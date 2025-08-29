@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <category><pattern>HELLO</pattern><template>Hi! I can help you explore computing careers. Tell me an interest or strength (e.g., "I like programming", "I like math", "I like design", "I like security", "I like cloud").</template></category>
+  <category><pattern>HI</pattern><template><srai>HELLO</srai></template></category>
+  <category><pattern>HELP</pattern><template>Try saying: "I like programming", "I like math", "I like security", "I like design", or "I like cloud".</template></category>
+  <category><pattern>I LIKE PROGRAMMING</pattern><template><srai>ROUTE SOFTWARE DEVELOPER</srai></template></category>
+  <category><pattern>I LOVE CODING</pattern><template><srai>I LIKE PROGRAMMING</srai></template></category>
+  <category><pattern>I LIKE MATH</pattern><template><srai>ROUTE DATA SCIENTIST</srai></template></category>
+  <category><pattern>I LIKE SECURITY</pattern><template><srai>ROUTE CYBERSECURITY ANALYST</srai></template></category>
+  <category><pattern>I LIKE DESIGN</pattern><template><srai>ROUTE UX UI DESIGNER</srai></template></category>
+  <category><pattern>I LIKE CLOUD</pattern><template><srai>ROUTE CLOUD ENGINEER</srai></template></category>
+  <category><pattern>*</pattern><template>Got it. Try: "I like programming", "I like math", "I like security", "I like design", or "I like cloud".</template></category>
+</aiml>

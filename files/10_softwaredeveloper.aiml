@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <category><pattern>ROUTE SOFTWARE DEVELOPER</pattern><template>You might enjoy being a Software Developer. Core skills: Python/JS, Git, algorithms. Starter step: Build a to-do app and push to GitHub. Prefer front-end, back-end, or full-stack?</template></category>
+  <category><pattern>FRONT END</pattern><template>Focus on UI (HTML, CSS, JS, React). Try cloning a landing page.</template></category>
+  <category><pattern>BACK END</pattern><template>Focus on APIs and databases (Python, SQL). Try building a CRUD API.</template></category>
+  <category><pattern>FULL STACK</pattern><template>Mix both ends. Deploy an end-to-end app.</template></category>
+</aiml>
